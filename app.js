@@ -41,7 +41,7 @@ function initBgCanvas() {
       vx: (Math.random() - 0.5) * 0.8,
       vy: (Math.random() - 0.5) * 0.8,
       radius: Math.random() * 2 + 1,
-      color: '#f3562b'
+      color: '#EB5348'
     });
   }
 
@@ -55,7 +55,7 @@ function initBgCanvas() {
     ctx.clearRect(0, 0, width, height);
 
     // Draw subtle grid lines
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.02)';
+    ctx.strokeStyle = 'rgba(45, 49, 52, 0.08)';
     ctx.lineWidth = 1;
     const gridSize = 60;
     for (let x = 0; x < width; x += gridSize) {
@@ -98,7 +98,7 @@ function initBgCanvas() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `rgba(243, 86, 43, ${0.2 * (1 - dist / 130)})`;
+          ctx.strokeStyle = `rgba(235, 83, 72, ${0.22 * (1 - dist / 130)})`;
           ctx.stroke();
         }
       }

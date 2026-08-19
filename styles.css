@@ -13,24 +13,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-primary: #171717;
-  --bg-surface: #202020;
-  --bg-surface-elevated: #282828;
-  --bg-surface-glass: rgba(23, 23, 23, 0.85);
-  --border-color: #333333;
-  --border-color-hover: #4d4d4d;
+  --bg-primary: #F2EEE5;
+  --bg-surface: #2D3134;
+  --bg-surface-elevated: #232628;
+  --bg-surface-glass: rgba(242, 238, 229, 0.88);
+  --border-color: #DDD7CB;
+  --border-color-dark: #3F4448;
+  --border-color-hover: #EB5348;
   
-  --accent-orange: #f3562b;
-  --accent-orange-glow: rgba(243, 86, 43, 0.3);
-  --accent-cyan: #f3562b;
-  --accent-cyan-glow: rgba(243, 86, 43, 0.3);
-  --accent-lime: #f3562b;
-  --accent-lime-glow: rgba(243, 86, 43, 0.3);
+  --accent-orange: #EB5348;
+  --accent-orange-glow: rgba(235, 83, 72, 0.3);
+  --accent-cyan: #EB5348;
+  --accent-cyan-glow: rgba(235, 83, 72, 0.3);
+  --accent-lime: #EB5348;
+  --accent-lime-glow: rgba(235, 83, 72, 0.3);
   
-  --text-primary: #FFFFFF;
-  --text-secondary: #dedede;
-  --text-muted: #888888;
-  --dark-grey: #4d4d4d;
+  --text-primary: #1C1E20;
+  --text-secondary: #58554F;
+  --text-muted: #847F75;
+  --dark-grey: #2D3134;
   
   --font-headline: 'Space Grotesk', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, sans-serif;
