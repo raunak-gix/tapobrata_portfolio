@@ -41,7 +41,7 @@ function initBgCanvas() {
       vx: (Math.random() - 0.5) * 0.8,
       vy: (Math.random() - 0.5) * 0.8,
       radius: Math.random() * 2 + 1,
-      color: '#BAFF00'
+      color: '#f3562b'
     });
   }
 
@@ -98,7 +98,7 @@ function initBgCanvas() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `rgba(186, 255, 0, ${0.18 * (1 - dist / 130)})`;
+          ctx.strokeStyle = `rgba(243, 86, 43, ${0.2 * (1 - dist / 130)})`;
           ctx.stroke();
         }
       }

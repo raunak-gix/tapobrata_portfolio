@@ -13,21 +13,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-primary: #0A0A0A;
-  --bg-surface: #1A1A1A;
-  --bg-surface-elevated: #161616;
-  --bg-surface-glass: rgba(26, 26, 26, 0.75);
-  --border-color: #262626;
-  --border-color-hover: #3D3D3D;
+  --bg-primary: #171717;
+  --bg-surface: #202020;
+  --bg-surface-elevated: #282828;
+  --bg-surface-glass: rgba(23, 23, 23, 0.85);
+  --border-color: #333333;
+  --border-color-hover: #4d4d4d;
   
-  --accent-cyan: #BAFF00;
-  --accent-cyan-glow: rgba(186, 255, 0, 0.25);
-  --accent-lime: #BAFF00;
-  --accent-lime-glow: rgba(186, 255, 0, 0.25);
+  --accent-orange: #f3562b;
+  --accent-orange-glow: rgba(243, 86, 43, 0.3);
+  --accent-cyan: #f3562b;
+  --accent-cyan-glow: rgba(243, 86, 43, 0.3);
+  --accent-lime: #f3562b;
+  --accent-lime-glow: rgba(243, 86, 43, 0.3);
   
   --text-primary: #FFFFFF;
-  --text-secondary: #A0A0A0;
-  --text-muted: #666666;
+  --text-secondary: #dedede;
+  --text-muted: #888888;
+  --dark-grey: #4d4d4d;
   
   --font-headline: 'Space Grotesk', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, sans-serif;
@@ -225,9 +228,9 @@ h1, h2, h3, h4, h5, h6 {
   gap: 8px;
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  color: var(--accent-lime);
-  background: rgba(186, 255, 0, 0.08);
-  border: 1px solid rgba(186, 255, 0, 0.25);
+  color: var(--accent-orange);
+  background: rgba(243, 86, 43, 0.1);
+  border: 1px solid rgba(243, 86, 43, 0.25);
   padding: 4px 12px;
   border-radius: var(--radius-pill);
   margin-bottom: 12px;
@@ -271,24 +274,15 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
-.btn-cyan {
-  background: var(--accent-cyan);
-  color: #000;
+.btn-cyan, .btn-lime {
+  background: var(--accent-orange);
+  color: #FFFFFF;
+  font-weight: 700;
 }
 
-.btn-cyan:hover {
+.btn-cyan:hover, .btn-lime:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px var(--accent-cyan-glow);
-}
-
-.btn-lime {
-  background: var(--accent-lime);
-  color: #000;
-}
-
-.btn-lime:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px var(--accent-lime-glow);
+  box-shadow: 0 6px 24px var(--accent-orange-glow);
 }
 
 .btn-outline {
@@ -298,8 +292,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline:hover {
-  border-color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-orange);
+  background: rgba(243, 86, 43, 0.08);
 }
 
 /* HERO SECTION */
