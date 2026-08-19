@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tapobrata — Video Editor, Frontend Developer & Motion Graphics Artist</title>
+  <meta name="description" content="Portfolio of Tapobrata — Multi-disciplinary Video Editor, Frontend Developer, and Motion Graphics Artist specializing in cinematic cuts, creative web apps, and kinetic 3D visuals.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Canvas Visualizer -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <a href="#" class="nav-brand">
+      <span class="brand-badge">[ T. ]</span>
+      <span>TAPOBRATA</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link active">About</a></li>
+      <li><a href="#nle-editor" class="nav-link">Video Editing</a></li>
+      <li><a href="#frontend-lab" class="nav-link">Frontend Lab</a></li>
+      <li><a href="#motion-lab" class="nav-link">Motion Graphics</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Role Filter Switcher Pill -->
+    <div class="role-filter-bar">
+      <button class="role-btn active" data-role="all">All Roles</button>
+      <button class="role-btn" data-role="editor">Video Editor</button>
+      <button class="role-btn" data-role="dev">Frontend Dev</button>
+      <button class="role-btn" data-role="motion">Motion Artist</button>
+    </div>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+
+    <!-- HERO SECTION -->
+    <section id="about" class="container hero-section">
+      <div class="hero-text-col">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          <span id="hero-role-tag">VIDEO EDITOR • FRONTEND DEV • MOTION ARTIST</span>
+        </div>
+
+        <h1 class="hero-title">
+          Crafting <span class="highlight-text">Cinematic Cuts</span> & <span class="highlight-text">Interactive Code</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Hi, I'm <strong>Tapobrata</strong>. I bridge the gap between high-tempo video editing, frontend engineering, and kinetic 3D motion graphics to build immersive digital experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#nle-editor" class="btn btn-lime">▶ Test NLE Editor</a>
+          <a href="#frontend-lab" class="btn btn-cyan">⚡ Try Code Lab</a>
+          <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="stat-number cyan-text">60+</div>
+            <div class="stat-label">Video Cuts</div>
+          </div>
+          <div>
+            <div class="stat-number lime-text">40+</div>
+            <div class="stat-label">Web Apps</div>
+          </div>
+          <div>
+            <div class="stat-number">60fps</div>
+            <div class="stat-label">Motion Polish</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card-col">
+        <div class="hero-card">
+          <img src="assets/avatar.jpg" alt="Tapobrata Profile Illustration" class="hero-avatar-img">
+          <div class="hero-card-floating-badge">
+            <div>
+              <div class="floating-badge-title">Tapobrata</div>
+              <div class="floating-badge-sub">Available for Projects</div>
+            </div>
+            <span class="section-tag" style="margin-bottom:0;">ONLINE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 1: NLE VIDEO TIMELINE & COLOR GRADING SUITE -->
+    <section id="nle-editor" class="container">
+      <div class="section-header">
+        <span class="section-tag lime-text">01 // VIDEO EDITING & COLOR SUITE</span>
+        <h2 class="section-title">Interactive NLE Video Scrubber</h2>
+        <p class="section-desc">Test my color grading LUT presets, timeline multi-track cuts, and audio sync metrics in real-time below.</p>
+      </div>
+
+      <div class="nle-card">
+        <div class="nle-header">
+          <div class="nle-window-controls">
+            <span class="nle-dot red"></span>
+            <span class="nle-dot yellow"></span>
+            <span class="nle-dot green"></span>
+          </div>
+          <div class="nle-title">Tapobrata_DaVinci_Timeline_Sequence.nle</div>
+          <div class="mono lime-text" id="nle-playback-state">PAUSED (24fps)</div>
+        </div>
+
+        <div class="nle-body">
+          <div class="nle-player-view">
+            <img src="assets/video_edit.jpg" alt="Video Edit Frame" id="nle-video-preview" class="nle-video-preview-img lut-rec709">
+            <div class="nle-player-overlay" id="nle-active-lut">LUT: REC.709 ORIGINAL</div>
+            <button class="nle-play-btn" id="nle-play-toggle" title="Play / Pause Timeline">▶</button>
+          </div>
+
+          <div class="nle-sidebar">
+            <div class="sidebar-heading">Select Color LUT Profile</div>
+            <div class="lut-picker">
+              <button class="lut-btn active" data-lut="rec709">Rec.709</button>
+              <button class="lut-btn" data-lut="cyberpunk">Cyberpunk</button>
+              <button class="lut-btn" data-lut="teal-orange">Teal & Orange</button>
+              <button class="lut-btn" data-lut="noir">Filmic Noir</button>
+            </div>
+
+            <div class="sidebar-heading">Editing Parameters</div>
+            <div class="nle-metrics">
+              <div class="metric-row">
+                <span>Timeline Length:</span>
+                <span class="metric-val">03:42:15</span>
+              </div>
+              <div class="metric-row">
+                <span>Color Space:</span>
+                <span class="metric-val">DaVinci YRGB</span>
+              </div>
+              <div class="metric-row">
+                <span>Pacing / Cut Speed:</span>
+                <span class="metric-val">120 BPM High-Tempo</span>
+              </div>
+              <div class="metric-row">
+                <span>Audio Mastering:</span>
+                <span class="metric-val">-14 LUFS Normalized</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nle-timeline-panel">
+          <div class="timeline-ruler">
+            <span>00:00:00</span>
+            <span>00:01:00</span>
+            <span>00:02:00</span>
+            <span>00:03:00</span>
+            <span>00:04:00</span>
+          </div>
+          <div class="timeline-tracks">
+            <div class="track-row">
+              <span class="track-label">V2 (FX Overlay)</span>
+              <div class="track-bar-container">
+                <div class="track-clip clip-v2">Cyberpunk Light Leaks</div>
+              </div>
+            </div>
+            <div class="track-row">
+              <span class="track-label">V1 (Main Video)</span>
+              <div class="track-bar-container">
+                <div class="track-clip clip-v1">Master Cut Clip 01</div>
+              </div>
+            </div>
+            <div class="track-row">
+              <span class="track-label">A1 (Audio Wave)</span>
+              <div class="track-bar-container">
+                <div class="track-clip clip-a1">Cinematic Score & Sound FX</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 2: FRONTEND DEVELOPER LAB & PLAYGROUND -->
+    <section id="frontend-lab" class="container">
+      <div class="section-header">
+        <span class="section-tag cyan-text">02 // FRONTEND ENGINEERING LAB</span>
+        <h2 class="section-title">Interactive UI Code Playground</h2>
+        <p class="section-desc">I write clean, modular, high-performance HTML/CSS/JS and React components with sleek dark aesthetic styling.</p>
+      </div>
+
+      <div class="dev-grid">
+        <div class="code-editor-card">
+          <div class="code-header">
+            <span><span>// </span>TapobrataComponent.jsx</span>
+            <span class="cyan-text">React 18 + Vanilla CSS</span>
+          </div>
+          <pre class="code-body">
+<span class="code-token-keyword">import</span> React, { useState } <span class="code-token-keyword">from</span> <span class="code-token-string">'react'</span>;
+
+<span class="code-token-keyword">export default function</span> <span class="code-token-function">CyberCard</span>() {
+  <span class="code-token-keyword">const</span> [<span class="code-token-var">activeTheme</span>, <span class="code-token-function">setTheme</span>] = <span class="code-token-function">useState</span>(<span class="code-token-string">'CYAN'</span>);
+
+  <span class="code-token-keyword">return</span> (
+    &lt;<span class="code-token-function">div</span> className=<span class="code-token-string">"glow-card"</span>&gt;
+      &lt;<span class="code-token-function">h3</span>&gt;Tapobrata Frontend Lab&lt;/<span class="code-token-function">h3</span>&gt;
+      &lt;<span class="code-token-function">p</span>&gt;60 FPS smooth glassmorphic UI.&lt;/<span class="code-token-function">p</span>&gt;
+      &lt;<span class="code-token-function">button</span> onClick={() =&gt; <span class="code-token-function">setTheme</span>(<span class="code-token-string">'LIME'</span>)}&gt;
+        Theme: {activeTheme}
+      &lt;/<span class="code-token-function">button</span>&gt;
+    &lt;/<span class="code-token-function">div</span>&gt;
+  );
+}</pre>
+        </div>
+
+        <div class="interactive-preview-card">
+          <div>
+            <span class="section-tag cyan-text" style="margin-bottom:16px;">LIVE RENDER PREVIEW</span>
+            <h3 style="font-size: 1.6rem; margin-bottom: 12px;">Interactive UI Component</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">Click the button below to toggle real-time CSS variables and neon glow effects on the rendered preview box.</p>
+
+            <div id="code-interactive-preview" class="neon-cyan-active" style="background: #111; border: 1px solid #00F0FF; padding: 24px; border-radius: var(--radius-md); box-shadow: 0 0 30px rgba(0, 240, 255, 0.4); transition: all 0.3s ease;">
+              <h4 style="color: var(--text-primary); margin-bottom: 6px;">Tapobrata Interactive Widget</h4>
+              <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary);">State: High Performance Rendered</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <button class="btn btn-cyan" id="code-effect-toggle">Active Theme: CYAN</button>
+
+            <div class="tech-pills-container">
+              <span class="tech-pill">React 18</span>
+              <span class="tech-pill">Vue.js</span>
+              <span class="tech-pill">JavaScript ES6+</span>
+              <span class="tech-pill">Three.js / WebGL</span>
+              <span class="tech-pill">CSS Grid & Flexbox</span>
+              <span class="tech-pill">GSAP</span>
+              <span class="tech-pill">TailwindCSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 3: MOTION GRAPHICS LAB & KINETIC CONTROLS -->
+    <section id="motion-lab" class="container">
+      <div class="section-header">
+        <span class="section-tag lime-text">03 // MOTION GRAPHICS LAB</span>
+        <h2 class="section-title">Kinetic 3D Motion Lab</h2>
+        <p class="section-desc">Adjust the real-time CSS motion vectors below to see physics, scaling, and luminescence in action.</p>
+      </div>
+
+      <div class="motion-lab-card">
+        <div class="motion-preview-box">
+          <div class="motion-target-box" id="motion-target-box">
+            <span>T.MOTION</span>
+          </div>
+        </div>
+
+        <div class="motion-controls-form">
+          <div class="control-group">
+            <div class="control-label">
+              <span>Scale Vector:</span>
+              <span id="val-scale" class="cyan-text">1.2x</span>
+            </div>
+            <input type="range" id="motion-scale-slider" class="range-slider" min="0.5" max="2.0" step="0.1" value="1.2">
+          </div>
+
+          <div class="control-group">
+            <div class="control-label">
+              <span>Rotation Angle:</span>
+              <span id="val-rotate" class="lime-text">15deg</span>
+            </div>
+            <input type="range" id="motion-rotate-slider" class="range-slider" min="-180" max="180" step="5" value="15">
+          </div>
+
+          <div class="control-group">
+            <div class="control-label">
+              <span>Luminescence / Glow Intensity:</span>
+              <span id="val-glow" class="cyan-text">30px</span>
+            </div>
+            <input type="range" id="motion-glow-slider" class="range-slider" min="0" max="60" step="2" value="30">
+          </div>
+
+          <div style="padding: 16px; background: #121212; border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+            <div><strong>Easing Curve:</strong> cubic-bezier(0.16, 1, 0.3, 1)</div>
+            <div><strong>Frame Rate Target:</strong> Smooth 60 FPS Canvas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 4: FEATURED PROJECTS GALLERY -->
+    <section id="projects" class="container">
+      <div class="section-header">
+        <span class="section-tag cyan-text">04 // SELECTED WORK</span>
+        <h2 class="section-title">Featured Showcase Projects</h2>
+        <p class="section-desc">Explore Tapobrata's handpicked projects across video editing, frontend development, and motion graphics.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card" data-category="editor">
+          <div class="project-thumb-wrapper">
+            <img src="assets/video_edit.jpg" alt="Video Edit Project" class="project-thumb-img">
+            <span class="project-type-badge editor">VIDEO EDITING</span>
+          </div>
+          <div class="project-content">
+            <div>
+              <h3 class="project-title">Cyberpunk Narrative Short</h3>
+              <p class="project-desc">High-tempo cinematic commercial cut with Rec.709 color grading, manual speed ramping, and custom audio mixing.</p>
+            </div>
+            <div class="project-footer">
+              <span>DaVinci Resolve • Premiere</span>
+              <button class="view-project-btn" data-pid="p1">View Project Details →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="dev">
+          <div class="project-thumb-wrapper">
+            <img src="assets/frontend_web.jpg" alt="Frontend Web App" class="project-thumb-img">
+            <span class="project-type-badge dev">FRONTEND DEV</span>
+          </div>
+          <div class="project-content">
+            <div>
+              <h3 class="project-title">AetherFlow Telemetry Web App</h3>
+              <p class="project-desc">Real-time WebGL network monitoring tool built with React, Three.js, and dark glassmorphic CSS controls.</p>
+            </div>
+            <div class="project-footer">
+              <span>React 18 • Three.js • CSS</span>
+              <button class="view-project-btn" data-pid="p2">View Project Details →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="motion">
+          <div class="project-thumb-wrapper">
+            <img src="assets/motion_graphics.jpg" alt="Motion Graphics Reel" class="project-thumb-img">
+            <span class="project-type-badge motion">MOTION GRAPHICS</span>
+          </div>
+          <div class="project-content">
+            <div>
+              <h3 class="project-title">Quantum 3D Motion Intro Reel</h3>
+              <p class="project-desc">Kinetic typography sequence, glowing spline particle orbits, and 3D logo reveals for digital media.</p>
+            </div>
+            <div class="project-footer">
+              <span>After Effects • Cinema 4D</span>
+              <button class="view-project-btn" data-pid="p3">View Project Details →</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 5: CREATIVE PROCESS & TIMELINE -->
+    <section class="container">
+      <div class="section-header">
+        <span class="section-tag lime-text">05 // WORKFLOW METHODOLOGY</span>
+        <h2 class="section-title">How Tapobrata Delivers</h2>
+        <p class="section-desc">A disciplined 4-step creative pipeline built for speed, precision, and visual impact.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-num">01</div>
+          <h3 class="process-title">Concept & Scripting</h3>
+          <p class="process-desc">Deconstructing storyboards, wireframes, sound direction, and UI component architecture.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">02</div>
+          <h3 class="process-title">Pacing & Rough Cut</h3>
+          <p class="process-desc">Assembly edit in Premiere / DaVinci alongside clean semantic HTML/JS scaffold setup.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">03</div>
+          <h3 class="process-title">Color Grade & Code Polish</h3>
+          <p class="process-desc">Precise LUT color grading, audio LUFS normalization, and responsive CSS styling.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">04</div>
+          <h3 class="process-title">Motion FX & Launch</h3>
+          <p class="process-desc">Applying kinetic 60fps motion graphics, WebGL particle polish, and final master render.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 6: CONTACT & BRIEF GENERATOR -->
+    <section id="contact" class="container">
+      <div class="contact-wrapper">
+        <div>
+          <span class="section-tag cyan-text">06 // GET IN TOUCH</span>
+          <h2 class="contact-info-title">Let's Build Something Exceptional</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 30px;">Have a video editing project, a custom web app requirement, or motion graphics work? Send a message directly to Tapobrata.</p>
+
+          <div style="display: flex; flex-direction: column; gap: 16px; font-family: var(--font-mono); font-size: 0.9rem;">
+            <div><span class="lime-text">⚡ Email:</span> tapobrata.creative@gmail.com</div>
+            <div><span class="cyan-text">📍 Location:</span> Kolkata, India // Remote Worldwide</div>
+            <div><span class="lime-text">💼 Availability:</span> Freelance & Full-time Roles</div>
+          </div>
+        </div>
+
+        <div>
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-input" placeholder="e.g. Alex Rivera" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Your Email</label>
+              <input type="email" class="form-input" placeholder="alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Service Required</label>
+              <select class="form-select" required>
+                <option value="all">Full Creative Package (Video + Web + Motion)</option>
+                <option value="editor">Video Editing & Color Grading</option>
+                <option value="dev">Frontend Web Development</option>
+                <option value="motion">Motion Graphics & 3D Visuals</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Project Details</label>
+              <textarea class="form-textarea" placeholder="Tell me about your timeline, scope, and vision..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-lime">Send Message to Tapobrata ➔</button>
+
+            <div id="contact-status" style="display:none; margin-top: 10px;"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>© 2026 Tapobrata Portfolio — Video Editor, Frontend Developer & Motion Graphics Artist</p>
+        <p style="margin-top: 8px; font-size: 0.75rem; color: var(--text-muted);">Built with HTML5, Vanilla CSS, JS & Space Grotesk / Inter / JetBrains Mono Design Tokens.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close">✕</button>
+      <span class="section-tag cyan-text" id="modal-type">PROJECT TYPE</span>
+      <h2 id="modal-title" style="font-size: 2rem; margin: 12px 0;">Project Title</h2>
+
+      <div style="margin-bottom: 20px; border-radius: var(--radius-md); overflow: hidden; height: 260px;">
+        <img src="" alt="Project Detail" id="modal-img" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; font-family: var(--font-mono); font-size: 0.85rem; background: #121212; padding: 16px; border-radius: var(--radius-sm);">
+        <div><strong>Client / Studio:</strong> <span id="modal-client" class="cyan-text">Client Name</span></div>
+        <div><strong>Tools Used:</strong> <span id="modal-tools" class="lime-text">Software Tools</span></div>
+      </div>
+
+      <p id="modal-desc" style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">Detailed description of the work performed by Tapobrata.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
