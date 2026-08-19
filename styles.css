@@ -22,6 +22,8 @@
   
   --accent-orange: #f3562b;
   --accent-orange-glow: rgba(243, 86, 43, 0.3);
+  --accent-white: #FFFFFF;
+  --accent-white-glow: rgba(255, 255, 255, 0.25);
   --accent-cyan: #f3562b;
   --accent-cyan-glow: rgba(243, 86, 43, 0.3);
   --accent-lime: #f3562b;
@@ -90,9 +92,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-mono);
 }
 
-.cyan-text { color: var(--accent-lime); }
-.lime-text { color: var(--accent-lime); }
-.purple-text { color: var(--accent-lime); }
+.cyan-text { color: var(--accent-orange); }
+.lime-text { color: var(--accent-orange); }
+.purple-text { color: var(--accent-orange); }
+.white-text { color: var(--accent-white); }
+
+.white-tag {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
 
 /* Navigation */
 .navbar {
