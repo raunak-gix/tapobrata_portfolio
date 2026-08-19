@@ -13,25 +13,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-primary: #F2EEE5;
-  --bg-surface: #2D3134;
-  --bg-surface-elevated: #232628;
-  --bg-surface-glass: rgba(242, 238, 229, 0.88);
-  --border-color: #DDD7CB;
-  --border-color-dark: #3F4448;
-  --border-color-hover: #EB5348;
+  --bg-primary: #121212;
+  --bg-surface: #1E1E1E;
+  --bg-surface-elevated: #242424;
+  --bg-surface-glass: rgba(18, 18, 18, 0.88);
+  --border-color: #2D2D2D;
+  --border-color-hover: #4D4D4D;
   
-  --accent-orange: #EB5348;
-  --accent-orange-glow: rgba(235, 83, 72, 0.3);
-  --accent-cyan: #EB5348;
-  --accent-cyan-glow: rgba(235, 83, 72, 0.3);
-  --accent-lime: #EB5348;
-  --accent-lime-glow: rgba(235, 83, 72, 0.3);
+  --accent-orange: #f3562b;
+  --accent-orange-glow: rgba(243, 86, 43, 0.3);
+  --accent-cyan: #f3562b;
+  --accent-cyan-glow: rgba(243, 86, 43, 0.3);
+  --accent-lime: #f3562b;
+  --accent-lime-glow: rgba(243, 86, 43, 0.3);
   
-  --text-primary: #1C1E20;
-  --text-secondary: #58554F;
-  --text-muted: #847F75;
-  --dark-grey: #2D3134;
+  --text-primary: #FFFFFF;
+  --text-secondary: #dedede;
+  --text-muted: #888888;
+  --dark-grey: #4d4d4d;
   
   --font-headline: 'Space Grotesk', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, sans-serif;
@@ -751,10 +750,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-pill-lg:hover {
-  border-color: var(--accent-lime);
-  color: var(--accent-lime);
-  background: rgba(186, 255, 0, 0.08);
-  box-shadow: 0 0 18px var(--accent-lime-glow);
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+  background: rgba(243, 86, 43, 0.12);
+  box-shadow: 0 0 18px var(--accent-orange-glow);
   transform: translateY(-3px);
 }
 
@@ -765,9 +764,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-pill:hover {
-  border-color: var(--accent-lime);
-  color: var(--accent-lime);
-  box-shadow: 0 0 12px var(--accent-lime-glow);
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+  box-shadow: 0 0 12px var(--accent-orange-glow);
 }
 
 /* MOTION GRAPHICS LAB SECTION */
@@ -1159,6 +1158,8 @@ footer {
 .about-card-title {
   font-size: 1.6rem;
   margin-bottom: 16px;
+  color: #FFFFFF;
+  font-weight: 700;
 }
 
 .about-text {
@@ -1172,6 +1173,7 @@ footer {
   font-size: 0.8rem;
   margin-bottom: 10px;
   font-family: var(--font-mono);
+  color: var(--accent-orange);
 }
 
 .bio-tabs {
@@ -1182,7 +1184,7 @@ footer {
 }
 
 .bio-tab {
-  background: #111;
+  background: #141414;
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   font-family: var(--font-mono);
@@ -1194,13 +1196,13 @@ footer {
 }
 
 .bio-tab:hover, .bio-tab.active {
-  border-color: var(--accent-lime);
-  color: var(--accent-lime);
-  background: rgba(186, 255, 0, 0.08);
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+  background: rgba(243, 86, 43, 0.12);
 }
 
 .bio-tab-content {
-  background: #0E0E0E;
+  background: #141414;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 20px;
@@ -1230,13 +1232,13 @@ footer {
   transition: var(--transition-fast);
   position: relative;
   overflow: hidden;
-  border-top: 3px solid var(--accent-lime);
+  border-top: 3px solid var(--accent-orange);
 }
 
 .pillar-card:hover {
   transform: translateY(-6px);
-  border-color: var(--accent-lime);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  border-color: var(--accent-orange);
+  box-shadow: 0 16px 36px rgba(243, 86, 43, 0.2);
 }
 
 .pillar-card-header {
@@ -1256,13 +1258,20 @@ footer {
   font-weight: 700;
   padding: 3px 8px;
   border-radius: var(--radius-pill);
-  background: rgba(186, 255, 0, 0.1);
-  color: var(--accent-lime);
-  border: 1px solid rgba(186, 255, 0, 0.25);
+  background: rgba(243, 86, 43, 0.12);
+  color: var(--accent-orange);
+  border: 1px solid rgba(243, 86, 43, 0.3);
 }
 
-.lime-tag, .cyan-tag, .purple-tag { background: rgba(186, 255, 0, 0.1); color: var(--accent-lime); border: 1px solid rgba(186, 255, 0, 0.25); }
-.purple-text, .cyan-text, .lime-text { color: var(--accent-lime); }
+.lime-tag, .cyan-tag, .purple-tag {
+  background: rgba(243, 86, 43, 0.12);
+  color: var(--accent-orange);
+  border: 1px solid rgba(243, 86, 43, 0.3);
+}
+
+.purple-text, .cyan-text, .lime-text {
+  color: var(--accent-orange);
+}
 
 .pillar-title {
   font-size: 1.25rem;
